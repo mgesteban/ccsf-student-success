@@ -11,7 +11,7 @@
 * [Expected Results](#expected-results)
 * [Importance of the Study](#importance-of-the-study)
 * [Repository Structure](#repository-structure)
-* [Next Steps](#next-steps)
+
 
 ---
 
