@@ -124,7 +124,8 @@ This project is important for educational planning and resource allocation at CC
 
 ## Notebooks
 
-* Notebook 1 - 
+### Notebook 1 — Data Cleaning Pipeline
+[student_success_services.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/student_success_services.ipynb)
 * Build Notebook 2 for EDA and visualization
 * Build Notebook 3 for regression modeling and decision tree analysis
 * Draft the initial report summarizing EDA insights and early findings
