@@ -10,7 +10,7 @@
 * [Methods and Techniques](#methods-and-techniques)
 * [Expected Results](#expected-results)
 * [Importance of the Study](#importance-of-the-study)
-* [Repository Structure](#repository-structure)
+
 
 
 ---
@@ -105,20 +105,6 @@ Such findings will help highlight which support services have the strongest infl
 ## Importance of the Study
 
 This project is important for educational planning and resource allocation at CCSF. Without studying these relationships, institutional decisions may lack evidence-based justification. If strong correlations are identified, the college can prioritize services with the greatest effect on student outcomes and improve service design, outreach, and retention strategies.
-
----
-
-## Repository Structure
-
-```
-.
-├── data/                     # Raw CSVs and cleaned datasets
-├── eda/                      # EDA notebooks (Notebook 1, 2, and 3 to be added)
-├── models/                   # Regression and tree-based model scripts
-├── visualizations/           # Generated charts and figures
-├── reports/                  # Initial and final capstone reports
-└── README.md                 # Project documentation (this file)
-```
 
 ---
 
