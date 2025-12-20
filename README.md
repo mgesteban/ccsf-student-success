@@ -130,15 +130,33 @@ This notebook establishes a statistical baseline, demonstrating that service par
 
 ---
 
-## Expected Results
+## Results
 
-The project anticipates finding:
+Exploratory data analysis and baseline statistical modeling provide several important findings regarding the relationship between student support services and program award completions at City College of San Francisco (CCSF).
 
-* A positive association between counseling, orientation, and education planning participation and program award completions
-* Identification of the most impactful services
-* Trend alignment or divergence between service participation patterns and completion trends
+Service Utilization Trends
 
-Such findings will help highlight which support services have the strongest influence on program completion rates.
+Across the 2014–2025 period, counseling and assessment services consistently represent the highest volume of student interactions when normalized per 1,000 students. Education planning and orientation services show greater year-to-year variability, while probation services account for a very small share of total service utilization. All services exhibit a pronounced decline during the COVID-19 enrollment collapse, followed by partial recovery in subsequent years.
+
+Program Award Trends
+
+Program award counts and award rates per 1,000 students display a notable disruption during the COVID-19 period. Although total enrollment declined sharply, award rates increased substantially, indicating that raw completion counts must be interpreted in the context of enrollment normalization. This finding reinforces the importance of using rates rather than absolute counts when comparing outcomes across time.
+
+Correlation Analysis
+
+Correlation analysis shows that several services are moderately to strongly associated with program award rates. Orientation, education planning, and probation services exhibit negative same-year correlations with award rates, consistent with their role as early-stage or remedial interventions that serve students prior to completion. Counseling services show a weaker and less consistent relationship. These patterns suggest that simple same-year correlations may obscure the true timing of service impacts.
+
+Baseline Multiple Linear Regression
+
+A baseline multiple linear regression model was fit using same-year service utilization rates to explain variation in program award rates. The model explains a substantial proportion of the variation in award rates (R² ≈ 0.89; adjusted R² ≈ 0.77) and is statistically significant despite the small sample size.
+
+Orientation services display a statistically significant negative association with award rates, aligning with their function as entry-point services for new students rather than completion-stage supports. Counseling services exhibit a positive association with award rates, though the estimate is marginally significant. Other services, including assessment, education planning, and probation services, are not statistically significant in the same-year model, likely due to multicollinearity and differing time horizons of impact.
+
+Interpretation and Limitations
+
+These results indicate that student support services collectively are strongly associated with completion outcomes, but their effects are not contemporaneous. Services delivered earlier in a student’s academic trajectory may influence completions one or more years later. As a result, same-year regression coefficients should not be interpreted causally.
+
+Overall, the findings support the use of lagged and longitudinal modeling approaches rather than single-year causal interpretations and provide a statistically grounded baseline for future modeling extensions.
 
 ---
 
