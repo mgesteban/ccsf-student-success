@@ -57,12 +57,6 @@ Totals for:
 
 * Term and annual enrollment (used for normalization and trend comparison)
 
-### Full-Time Equivalent Students (FTES)
-
-* Enrollment-based funding metric used for statewide apportionment
-
-Reference: Capstone proposal.
-
 ---
 
 ## Methods and Techniques
