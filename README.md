@@ -1,158 +1,123 @@
 # CCSF Student Success Services and Program Completions
 
-### Capstone Project – Exploratory Data Analysis (EDA) and Predictive Modeling
+### **Capstone Project – Exploratory Data Analysis (EDA) and Predictive Modeling**
 
-## Table of Contents
+### Table of Contents
 
-* [Project Overview](#project-overview)
-* [Research Question](#research-question)
-* [Data Sources](#data-sources)
-* [Methods and Techniques](#methods-and-techniques)
-* [Expected Results](#expected-results)
-* [Importance of the Study](#importance-of-the-study)
-
-
+* [Project Overview](https://github.com/mgesteban/ccsf-student-success/tree/main#project-overview)  
+* [Research Question](https://github.com/mgesteban/ccsf-student-success/tree/main#research-question)  
+* [Data Sources](https://github.com/mgesteban/ccsf-student-success/tree/main#data-sources)  
+* [Methods and Techniques](https://github.com/mgesteban/ccsf-student-success/tree/main#methods-and-techniques)  
+* [Expected Results](https://github.com/mgesteban/ccsf-student-success/tree/main#expected-results)  
+* [Importance of the Study](https://github.com/mgesteban/ccsf-student-success/tree/main#importance-of-the-study)
 
 ---
 
-## Project Overview
+### Project Overview
 
 This capstone project examines whether student participation in support services at City College of San Francisco (CCSF) is associated with higher rates of program award completion over time.
 
-Student support services—such as counseling, orientation, education planning, assessment, and probation services—are widely regarded as critical to student success. However, these services are often evaluated independently from completion outcomes. This project links multi-year service utilization data with institutional award data to explore patterns, trends, and statistical relationships.
+Student support services such as counseling, orientation, education planning, assessment, and probation services are widely regarded as critical to student success. However, these services are often evaluated independently from completion outcomes. This project links multi-year service utilization data with institutional award data to explore patterns, trends, and statistical relationships.
 
 The analysis uses publicly available institutional data from the California Community Colleges Chancellor’s Office DataMart, covering academic years 2014–2015 through 2024–2025. The project emphasizes transparent data cleaning, rigorous exploratory analysis, and interpretable baseline modeling.
 
----
+### **Research Question**
 
-## Research Question
-
-**Does greater participation in student support services at CCSF correspond to higher program award completions over time?**
+***Does greater participation in student support services at CCSF correspond to higher program award completions over time?***
 
 This question addresses an institutional need. CCSF provides a wide range of student services but does not currently link participation data to program completion outcomes. Understanding this relationship can guide more effective investments and program decisions.
 
----
-
-## Data Sources
+### Data Sources
 
 Data Source: [California Community Colleges DataMart](https://datamart.cccco.edu/), covering 2014–2025 data for the San Francisco Community College District.
 
+### 1\. Student Success Services (2014–2025)
 
-## 1. Student Success Services (2014–2025)
+Counts of students receiving services, including:
 
-1. Counts of students receiving services, including:
-
-2. Counseling / Advisement
-
-3. Education Planning
-
-4. Orientation
-
-5. Assessment / Placement
-
-6. Academic or Progress Probation Services
+1. Counseling / Advisement  
+2. Education Planning  
+3. Orientation  
+4. Assessment / Placement  
+5. Academic or Progress Probation Services
 
 Data are reported at the term level and aggregated to annual totals.
 
-## 2. Program Awards (2014–2025)
+### 2\. Program Awards (2014–2025)
 
 Annual counts of:
 
-1. Associate degrees
-
-2. Certificates (credit and noncredit)
-
+1. Associate degrees  
+2. Certificates (credit and noncredit)  
 3. Total institutional program awards
 
-## 3. Student Headcount (2014–2025)
+### 3\. Student Headcount (2014–2025)
 
 Annual unduplicated student enrollment, used to normalize:
 
-1. Service utilization rates
-
+1. Service utilization rates  
 2. Program award rates (per 1,000 students)
----
 
-## Methods and Techniques
+### Methods and Techniques
 
 Notebook 1 — Data Cleaning & Integration
 
 The first notebook constructs a reproducible data-cleaning pipeline that:
 
-1. Removes DataMart metadata rows
-
-2. Standardizes service names across years
-
-3. Extracts only “Service Received” counts
-
-4. Converts string-formatted counts to numeric values
-
-5. Reshapes wide term-level data into long format
-
-6. Aggregates term data into annual totals
-
+1. Removes DataMart metadata rows  
+2. Standardizes service names across years  
+3. Extracts only “Service Received” counts  
+4. Converts string-formatted counts to numeric values  
+5. Reshapes wide term-level data into long format  
+6. Aggregates term data into annual totals  
 7. Produces a clean, analysis-ready master dataset (2014–2025)
 
-### 2. Notebook 2 — Exploratory Data Analysis, Visualization & Baseline Modeling
-
+### 2\. Notebook 2 — Exploratory Data Analysis, Visualization & Baseline Modeling
 
 The EDA notebook focuses on understanding trends, distributions, and relationships through:
 
-1. Time-series visualization of total service delivery
-
-2. Service-specific utilization trends (rates per 1,000 students)
-
-3. Program award trends and normalization by enrollment
-
-4. COVID-19 disruption analysis
-
-5. Correlation analysis between service rates and award rates
-
-6. Exploration of same-year vs. lagged service effects
-
-7. Summary statistics and variability analysis for each service
+1. Time-series visualization of total service delivery  
+2. Service-specific utilization trends (rates per 1,000 students)  
+3. Program award trends and normalization by enrollment  
+4. COVID-19 disruption analysis  
+5. Correlation analysis between service rates and award rates  
+6. Summary statistics and variability analysis for each service
 
 This notebook establishes context, identifies anomalies, and informs modeling decisions.
 
-## Baseline modeling includes:
+### Baseline modeling includes:
 
-1. Multiple Linear Regression (OLS) using service participation rates as predictors
-
-2. Model fit assessment (R², adjusted R², p-values)
-
-3. Interpretation of coefficients in an institutional context
-
-4. Identification of multicollinearity and timing limitations
-
+1. Multiple Linear Regression (OLS) using service participation rates as predictors  
+2. Model fit assessment (R², adjusted R², p-values)  
+3. Interpretation of coefficients in an institutional context  
+4. Identification of multicollinearity and timing limitations  
 5. Discussion of why same-year causal interpretation is inappropriate
 
 This notebook establishes a statistical baseline, demonstrating that service participation rates collectively explain a substantial proportion of variation in program award rates.
 
----
+## **Results**
 
-## Results
+Exploratory data analysis and baseline statistical modeling provide several important findings regarding the relationship between student support services and program award completions at **City College of San Francisco (CCSF)**.
 
-Exploratory data analysis and baseline statistical modeling provide several important findings regarding the relationship between student support services and program award completions at City College of San Francisco (CCSF).
-
-Service Utilization Trends
+### **Service Utilization Trends**
 
 Across the 2014–2025 period, counseling and assessment services consistently represent the highest volume of student interactions when normalized per 1,000 students. Education planning and orientation services show greater year-to-year variability, while probation services account for a very small share of total service utilization. All services exhibit a pronounced decline during the COVID-19 enrollment collapse, followed by partial recovery in subsequent years.
 
-Program Award Trends
+### **Program Award Trends**
 
 Program award counts and award rates per 1,000 students display a notable disruption during the COVID-19 period. Although total enrollment declined sharply, award rates increased substantially, indicating that raw completion counts must be interpreted in the context of enrollment normalization. This finding reinforces the importance of using rates rather than absolute counts when comparing outcomes across time.
 
-Correlation Analysis
+### **Correlation Analysis**
 
-Correlation analysis shows that several services are moderately to strongly associated with program award rates. Orientation, education planning, and probation services exhibit negative same-year correlations with award rates, consistent with their role as early-stage or remedial interventions that serve students prior to completion. Counseling services show a weaker and less consistent relationship. These patterns suggest that simple same-year correlations may obscure the true timing of service impacts.
+Correlation analysis shows that several services are moderately to strongly associated with program award rates. Orientation, education planning, and probation services exhibit negative same-year correlations with award rates, consistent with their role as early-stage or remedial interventions that serve students prior to completion. Counseling services show a weaker and less consistent relationship. These patterns highlight that many student support services operate earlier in the academic trajectory, suggesting that same-year correlations may not fully capture their eventual impact on completions.
 
-Baseline Multiple Linear Regression
+### Baseline Multiple Linear Regression
 
 A baseline multiple linear regression model was fit using same-year service utilization rates to explain variation in program award rates. The model explains a substantial proportion of the variation in award rates (R² ≈ 0.89; adjusted R² ≈ 0.77) and is statistically significant despite the small sample size.
 
 Orientation services display a statistically significant negative association with award rates, aligning with their function as entry-point services for new students rather than completion-stage supports. Counseling services exhibit a positive association with award rates, though the estimate is marginally significant. Other services, including assessment, education planning, and probation services, are not statistically significant in the same-year model, likely due to multicollinearity and differing time horizons of impact.
 
-Interpretation and Limitations
+### Interpretation and Limitations
 
 These results indicate that student support services collectively are strongly associated with completion outcomes, but their effects are not contemporaneous. Services delivered earlier in a student’s academic trajectory may influence completions one or more years later. As a result, same-year regression coefficients should not be interpreted causally.
 
@@ -160,37 +125,31 @@ Overall, the findings support the use of lagged and longitudinal modeling approa
 
 ---
 
-## Key Analytical Themes (So Far)
+### Key Analytical Themes (So Far)
 
-* Service utilization patterns differ substantially by service type
-
-* Counseling and assessment services account for the largest share of student interactions
-
-* Program award rates increased during COVID-era enrollment declines, requiring careful interpretation
-
-* Several services exhibit stronger relationships with completions when analyzed longitudinally rather than cross-sectionally
-
+* Service utilization patterns differ substantially by service type  
+* Counseling and assessment services account for the largest share of student interactions  
+* Program award rates increased during COVID-era enrollment declines, requiring careful interpretation  
+* Several services exhibit stronger relationships with completions when analyzed longitudinally rather than cross-sectionally  
 * Results caution against simple same-year causal assumptions
 
-## Importance of the Study
+### Importance of the Study
 
-* This project contributes to institutional research and planning by:
+This project contributes to institutional research and planning by:
 
-* Linking service utilization to completion outcomes for the first time at CCSF
-
-* Providing a reproducible, transparent analytical framework
-
-* Supporting evidence-based resource allocation
-
+* Linking service utilization to completion outcomes for the first time at CCSF  
+* Providing a reproducible, transparent analytical framework  
+* Supporting evidence-based resource allocation  
 * Highlighting the importance of timing, scale, and context when evaluating student success services
 
 Rather than treating student services as isolated activities, this analysis frames them as part of a longitudinal student success ecosystem.
 
-## Notebooks
+## **Notebooks**
 
-### Notebook 1 — Data Cleaning Pipeline
-[notebook_1_student_success_services.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_1_student_success_services.ipynb)
-### Notebook 2 for EDA Visualization and Baseline Model
-[notebook_2_eda_visualization.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_2_eda_visualization.ipynb)
+### **Notebook 1 — Data Cleaning Pipeline**
 
+[notebook\_1\_student\_success\_services.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_1_student_success_services.ipynb)
 
+### **Notebook 2 for EDA Visualization and Baseline Model**
+
+[notebook\_2\_eda\_visualization.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_2_eda_visualization.ipynb)  
