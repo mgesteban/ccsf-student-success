@@ -171,8 +171,8 @@ Rather than treating student services as isolated activities, this analysis fram
 ## Notebooks
 
 ### Notebook 1 — Data Cleaning Pipeline
-[notebook_1_student_success_services.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_1_student_success_services.ipynb))
+[notebook_1_student_success_services.ipynb](https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_1_student_success_services.ipynb)
 ### Notebook 2 for EDA Visualization and Baseline Model
-[notebook_2_eda_visualization.ipynb] 
+[notebook_2_eda_visualization.ipynb] (https://github.com/mgesteban/ccsf-student-success/blob/main/notebook_2_eda_visualization.ipynb)
 
 
